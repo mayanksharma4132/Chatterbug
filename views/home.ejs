@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>WebSockets 101</title>
+	
+	<link rel="stylesheet" type="text/css" href="../stylesheets/style2.css">
+	<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+<p id="userid" style="display: none;"><%= user.id %></p>
+<h1>Welcome <%= user.name%></h1>
+<h4>Message</h4>
+<% for(var i=0;i<allother.length;i++){ %>
+	<a href="/Home/chat/<%= allother[i]._id %>"><%= allother[i].name %></a><span class="online dot"></span><p style="display: none;" class="id"><%= allother[i]._id%></p>
+	<br>
+<% } %>
+</body>
+<script type="text/javascript" src="/js/home-front.js"></script>
+</html>
+
